@@ -20,7 +20,7 @@ router.get('/getidjob/:id', async(req, res)=>{  // getting job
     } catch (error) {
         console.log('get error:', error);
     }
-})
+}) 
 
 
 

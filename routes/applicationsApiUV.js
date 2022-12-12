@@ -51,7 +51,7 @@ router.get('/applicationdata/:id', async (req, res) => {       // getdata for ad
 router.get('/UVApps', async (req, res) => {      //  unverified applications
     try {
      
-        let list = await ApplicationData.find({ approval_status: "not approved"}, {postedBy:{$ne : "admin"}})
+        let list = await ApplicationData.find({ approval_status: "not approved", postedBy:{$ne : "admin"}})
         res.send(list)
     } catch (error) {
         console.log(error)
